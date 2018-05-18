@@ -1,0 +1,51 @@
+#container {
+  height: 100%; 
+  width:100%; 
+}
+#cont2 {
+  height: 100%; 
+  width:100%; 
+  color: white;
+  font-size: 2em;
+}
+
+#left, #middle, #right {display: inline-block; 
+}
+#left {width: 20%;
+	padding: 0px 325px;
+}
+#middle {width: 10%; 
+}
+#right {width: 20%;
+}
+.first{
+	color: white !important;
+  font-size: 2em !important;
+}
+.second {
+	color: white !important;
+  font-size: 1.2em !important;
+}
+#aes {
+	visibility: hidden;
+}
+
+#infoTable {
+padding: 40px 0px;
+}
+th.higher{
+  text-align: center;
+}
+td, th {
+    border: 2.5px solid white;
+    text-align: left;
+    padding: 8px;
+}
+tr:nth-child(even) {
+    background-color: white;
+    color: black;
+}
+tr:nth-child(odd) {
+    background-color: #284557;
+    color: white; 
+}

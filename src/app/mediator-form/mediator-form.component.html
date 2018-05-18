@@ -1,0 +1,128 @@
+<div class="row">
+	<div class="col-md-8">
+		<div id="container">
+		<div id="left">
+			<form (ngSubmit)="onSubmit()">
+					<div class="form-group">
+						<label class="first" for="instruction">Simple Instruction</label>
+						<input type="text"
+							class="form-control" id="instruction" placeholder="enter instruction"
+							[(ngModel)]="mediator.instruction" name="instruction" required>
+					</div>
+					<button type="submit" class="btn btn-default">Submit</button>
+					<br>
+					<label id="aes">This is just for aesthetic</label>
+			</form>
+		</div>
+		<div id="middle">
+		</div>
+		<div id="right">
+			<form (ngSubmit)="onSubmitComplex()">
+					<div class="form-group">
+						<label class="first" for="instruction">Complex Instruction</label>
+						<input type="text"
+							class="form-control" id="instruction" placeholder="enter complex instruction"
+							[(ngModel)]="mediatorcomplex.instruction" name="instruction" required>
+					</div>
+					<div class="form-group">
+						<label class="second" for="parameter">Parameter:</label>
+						<input type="text"
+							class="form-control" id="parameter" placeholder="enter parameter"
+							[(ngModel)]="mediatorcomplex.parameter" name="parameter" required>
+					</div>
+					<label class="second">Type:</label>
+					<select name="typeParameter" [(ngModel)]="mediatorcomplex.typeParameter">
+						<option value="Time">Time</option>
+						<option value="Angle">Angle</option>
+					</select>
+				<button type="submit" class="btn btn-default">Submit</button>
+			</form>
+		</div>
+	</div>
+</div>
+	<div class="second">
+		<button (click)="onGet(); infoNew.text='hi'" type="submit" class="btn btn-default">Get Info</button>
+		<label>This is old</label>
+	</div>
+
+	<div id="infoTable" align="center">
+		<table>
+			<tr>
+				<th class="higher">Simple Instructions
+					<tr>
+						<th>Command</th>
+						<th>Description</th>
+					</tr>
+					<tr>
+						<td>begin</td>
+						<td>Starts the connection with the robot (Must start from here to test the demo).</td>
+					</tr>
+					<tr>
+						<td>done</td>
+						<td>Closes the connection to the robot.</td>
+					</tr>
+					<tr>
+						<td>close</td>
+						<td>Closes the connection to the server, server stops.</td>
+					</tr>
+					<tr>
+						<td>forward</td>
+						<td>Moves forward for a certain time.</td>
+					</tr>
+					<tr>
+						<td>backward</td>
+						<td>Moves backwards for a certain time.</td>
+					</tr>
+					<tr>
+						<td>right</td>
+						<td>Rotates the robot to the right.</td>
+					</tr>
+					<tr>
+						<td>left</td>
+						<td>Rotates the robot to the left.</td>
+					</tr>
+				</th>
+				<th class="higher">Complex Instructions
+					<tr>
+						<th>Command</th>
+						<th>Description</th>
+					</tr>
+					<tr>
+						<td>Parameter</td>
+						<td>Number that the robot will execute a certain instrucction.</td>
+					</tr>
+					<tr>
+						<td>Type</td>
+						<td>Type of the parameter. If time, the parameter will be in seconds.</td>
+					</tr>
+					<tr>
+						<td>done</td>
+						<td>Closes the connection to the robot.</td>
+					</tr>
+					<tr>
+						<td>close</td>
+						<td>Closes the connection to the server, server stops.</td>
+					</tr>
+					<tr>
+						<td>forward</td>
+						<td>The robot will move forward (if parameter type is time, it will move for the indicated time).</td>
+					</tr>
+					<tr>
+						<td>backward</td>
+						<td>The robot will move backwards (if parameter type is time, it will move for the indicated time).</td>
+					</tr>
+					<tr>
+						<td>right</td>
+						<td>The robot will rotate to the right (if parameter type is time, it will rotate for the indicated time,
+							<br> if it's angle, the robot will rotate by the indicated angle).</td>
+					</tr>
+					<tr>
+						<td>left</td>
+						<td>The robot will rotate to the left (if parameter type is time, it will rotate for the indicated time,
+							<br> if it's angle, the robot will rotate by the indicated angle).</td>
+					</tr>
+				</th>
+			</tr>
+		</table>
+	</div>
+</div>
