@@ -12,7 +12,7 @@ const httpOptions = {
 export class MediatorService {
 
  
-  private POST_MEDIATOR_URL = 'http://157.253.155.139:1234';
+  private POST_MEDIATOR_URL = 'http://157.253.208.27:1234';
   private headers = new HttpHeaders({'Content-Type': 'application/json'});
 
   constructor(private http: HttpClient) {}

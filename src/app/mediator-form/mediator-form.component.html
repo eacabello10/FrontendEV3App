@@ -40,9 +40,9 @@
 		</div>
 	</div>
 </div>
-	<div class="second">
-		<button (click)="onGet(); infoNew.text='hi'" type="submit" class="btn btn-default">Get Info</button>
-		<label>This is old</label>
+	<div class="getInfDiv">
+		<button (click)="onGet()" buttonText="This is old" type="submit" class="btn btn-default">Get Info</button>
+		<p>Info received: {{info}}</p>
 	</div>
 
 	<div id="infoTable" align="center">

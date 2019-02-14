@@ -5,10 +5,7 @@ import {Mediator} from '../mediator.interface';
 import {MediatorComplex} from '../mediatorcomplex.interface';
 
 import {MediatorService} from '../mediator.service';
-
- 
-
-
+import {FormControl, FormGroup} from '@angular/forms';
 @Component({
   selector: 'mediator-form',
   templateUrl: './mediator-form.component.html',
@@ -19,7 +16,7 @@ export class MediatorFormComponent implements OnInit {
 	mediatorcomplex: MediatorComplex = {type: 'complex', instruction:'', parameter: 0, typeParameter:''};
  
   constructor(private mediatorService: MediatorService) {}
- 
+  info = "Detected Distance: 0, Battery: 0"; 
   ngOnInit() {
   }
 
@@ -48,7 +45,7 @@ export class MediatorFormComponent implements OnInit {
 
     onGet(){
       this.mediatorService.getInfo().subscribe(
-      value => {
+      value => { this.info = value
         console.log('HTTP success', value);
       }, error => {
         console.log('FAIL to get info!', error);

@@ -1,4 +1,4 @@
-export interface Mediator {
+ export interface Mediator {
   type: string;
   instruction: string;
 }

@@ -30,6 +30,11 @@
 	visibility: hidden;
 }
 
+.getInfDiv{
+  width: 20%;
+  padding: 0px 325px;
+}
+
 #infoTable {
 padding: 40px 0px;
 }
@@ -48,4 +53,7 @@ tr:nth-child(even) {
 tr:nth-child(odd) {
     background-color: #284557;
     color: white; 
+}
+p{
+  color: white;
 }
